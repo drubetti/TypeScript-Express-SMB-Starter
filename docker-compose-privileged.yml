@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  smb-starter-privileged:
+    image: smb-starter-privileged:latest
+    container_name: smb-starter-privileged
+    privileged: true
+    restart: on-failure
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=
+      - SAMBA_USER=$SAMBA_USER
+      - SAMBA_PASSWORD=$SAMBA_PASSWORD
+      - SAMBA_SERVER=$SAMBA_SERVER

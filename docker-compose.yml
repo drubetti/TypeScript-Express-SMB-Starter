@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  smb-starter:
+    image: smb-starter:latest
+    container_name: smb-starter
+    restart: on-failure
+    ports:
+      - '3000:3000'
+    environment:
+      - NODE_ENV=
